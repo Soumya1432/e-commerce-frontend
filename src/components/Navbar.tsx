@@ -1,20 +1,25 @@
 import React from 'react';
 import { FaCartShopping } from 'react-icons/fa6';
 import { FiLock } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
 	return (
-		<div className="w-full  flex justify-between items-center p-2 bg-white">
+		<div className="w-full flex justify-between items-center p-2 bg-white ">
 			<div className="">
 				<span>
-					<h1 className="text-emerald-900 text-3xl ">GreenNatures</h1>
+					<Link to="/">
+					<h1 className="text-emerald-900 text-3xl  ">GreenNatures</h1>
+					</Link>
 				</span>
 			</div>
 
 			<div className="flex">
 				<ul className="flex justify-center space-x-8 ">
+					<Link to={"/"}>
 					<li className="text-lg text-slate-900 hover:text-slate-700 cursor-pointer  ">
 						Home
 					</li>
+					</Link>
 					<li className="text-lg text-slate-900 hover:text-slate-700 cursor-pointer ">
 						Blog
 					</li>
@@ -24,9 +29,12 @@ const Navbar = () => {
 					<li className="text-lg text-slate-900 hover:text-slate-700 cursor-pointer ">
 						Contact Us
 					</li>
+					<Link to={"/product"}>
+
 					<li className="text-lg text-slate-900 hover:text-slate-700 cursor-pointer ">
 						Products
 					</li>
+					</Link>
 				</ul>
 			</div>
 

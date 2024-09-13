@@ -32,18 +32,18 @@ const listData:any =[
         image:"https://images.pexels.com/photos/19268016/pexels-photo-19268016/free-photo-of-potted-plants-next-to-diffuser-bottle-with-balsa-sticks.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
     }
 ]
-const FeatureCard = () => {
+const FeatureCard:React.FC = () => {
   return (
     <div className='p-2'>
         <div className='flex justify-around gap-80 mt-20 items-center'>
-            <span className='text-3xl' >Find Plant Category</span>
+            <span className='text-3xl sm:text-blue-600' >Find Plant Category</span>
             <span className='flex gap-4'>
                 <button className='outline-none' ><FaArrowLeft  className='text-2xl text-slate-600  ' /></button>
                 <button className='outline-none' ><FaArrowRight className='text-2xl text-slate-600 ' /></button>
             </span>
         </div>
 
-        <div className='flex justify-center mt-10 list-none mb-4 gap-10 '>
+        <div className='lg:flex sm:grid sm:grid-cols-2  justify-center mt-10 list-none mb-4 gap-10 '>
            {
              listData.map((index)=>(
                 <li key={index.id}>
@@ -58,7 +58,7 @@ const FeatureCard = () => {
 
         <div className='mt-20'>
             <span className='text-green-900  text-2xl font-bold'>Today's Deal</span>
-            <div className='flex w-full h-full mt-10'>
+            <div className='flex  w-full h-full mt-10'>
                 <img className='w-1/2' src={image1} alt=' '/>
                 <img className='w-1/2' src={image2} alt=' '/>
             </div>
